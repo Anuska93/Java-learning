@@ -61,3 +61,21 @@ public class Main
 		System.out.println(iob.sameAvg(dob));
 	}
 }
+
+// generic constructor
+
+class GenCons{
+    private double val;
+    <T extends Number>GenCons(T args){
+        val= args.doubleValue();
+    }
+    void showval(){
+        System.out.println(val);
+    }
+}
+class Main{
+    public static void main(String[] args){
+        GenCons ob= new GenCons(100.9);
+        ob.showval();
+    }
+}
